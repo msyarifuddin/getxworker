@@ -9,6 +9,16 @@ class HomeController extends GetxController {
     // TODO: implement onInit
     ever(dataPantau, (data) => print("Perubahan"));
     once(dataPantau, (data) => print("cuma 1x"));
+    debounce(
+      dataPantau,
+      (data) => print("2 detik setelah terakhir berubah"),
+      time: Duration(seconds: 2),
+    );
+    debounce(
+      dataPantau,
+      (data) => print("setiap 2 detik dijalankan"),
+      time: Duration(seconds: 2),
+    );
     super.onInit();
   }
 }
